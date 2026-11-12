@@ -1,0 +1,37 @@
+{
+  "name": "@local/dsh-agent-hub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "自建子代理工具链：hub_spawn / hub_list / hub_wait / hub_tell。一套工具同时管 Team teammate 和 subagent，不覆盖原装工具。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "subagent",
+    "agent-team"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6 || >=0.2.0-rc.1 <1.0.0-0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

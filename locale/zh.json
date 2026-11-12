@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "子代理中枢",
+    "description": "一套工具同时管 Team teammate 和 subagent：派发、列出、等待、发消息。"
+  }
+}
