@@ -2,6 +2,11 @@
 
 > 自建子代理工具链：一套工具同时管 Team teammate 和 subagent，不覆盖任何原装工具。
 
+[![GitHub](https://img.shields.io/badge/GitHub-Ke--wood%2Fdsh--agent--hub-blue?logo=github)](https://github.com/Ke-wood/dsh-agent-hub)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> DSH 插件 · 与 [`dsh-workflow-kit`](https://github.com/Ke-wood/dsh-workflow-kit) 搭配使用（可选，非强依赖）。
+
 ---
 
 ## 它解决什么
@@ -87,6 +92,12 @@ const children = [...this.resident.values()].filter(...)
 - 派出后先给 3 秒宽限，避免「刚派出未启动」被误判为「没在跑」
 
 ---
+
+## 兼容性与依赖
+
+- 仅依赖 `@deepseek-ai/cordis` 与 `@deepseek-ai/dsh-tools`（`peerDependencies`，由 DSH 运行时提供），**无第三方运行时依赖**。
+- 不覆盖任何原装工具：`hub_*` 独立命名，与 `list_agents` / `wait_agent` / `send_message` 并存不冲突。
+- 与 [`dsh-workflow-kit`](https://github.com/Ke-wood/dsh-workflow-kit) 无强依赖，但一起用最省心。
 
 ## 安装
 
